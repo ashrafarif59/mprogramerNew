@@ -95,25 +95,8 @@ class _LoginState extends State<Login> {
 
               SizedBox(height: MediaQuery.of(context).size.height*.02,),
               PrimaryButton(title: 'Login With Google', onPress: (){},textColor: AppColors.primaryColor, backgroundColor: AppColors.whiteColor,imageLeft: googleImage,),
-              // Container(width: 1000,
-              //     height: 60.5,
-              //     child: ElevatedButton(onPressed: (){},  style: ElevatedButton.styleFrom(
-              //       backgroundColor: AppColors.primaryColor ?? AppColors.whiteColor,
-              //       shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.circular( 100),
-              //       ),
-              //     ),
-              //         child: Row(
-              //           mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //         children: [
-              //           SizedBox(),
-              //           Text('What',style: TextStyle(color: AppColors.whiteColor),),
-              //           Icon(Icons.arrow_back,color: AppColors.whiteColor,)
-              //         ],
-              //         )
-              //     )
-              // ),
-              SizedBox(height: MediaQuery.of(context).size.height*.1,),
+
+            //  SizedBox(height: MediaQuery.of(context).size.height*.1,),
               InkWell(
                   onTap:(){Navigator.pushNamed(context, RouteName.Register);},
                   child: Center(child: Text('Don’t have any account? Register here', style: TextStyle(fontFamily: 'Poppins',fontWeight: FontWeight.bold,color: AppColors.primaryColor,fontSize: 16),))),

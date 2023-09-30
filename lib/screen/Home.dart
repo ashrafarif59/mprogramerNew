@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
     return  Scaffold(
       body:
 
-          Stack(
+            Stack(
             children: [
               layout[selectedIndex],
               Positioned(
@@ -61,9 +61,7 @@ class _HomeState extends State<Home> {
                               SizedBox(),
                               InkWell(
                                 onTap: (){
-                                  setState(() {
-                                    selectedIndex=0;
-                                  });
+                                  Navigator.pushNamed(context, RouteName.Login);
 
 
                                   },
@@ -73,12 +71,11 @@ class _HomeState extends State<Home> {
                                   children: [
                                     Icon(Icons.home,
                                        color: selectedIndex==0 ? Colors.lightBlueAccent : AppColors.whiteColor ,
-                                      size: 30,),
+                                      size: 20,),
                                     Text('Home',style: TextStyle(color: selectedIndex==0 ? Colors.lightBlueAccent : AppColors.whiteColor),)
                                   ],
                                 ),
                               ),
-                              SizedBox(),
                               SizedBox(),
                               SizedBox(),
                               SizedBox(),
@@ -98,14 +95,31 @@ class _HomeState extends State<Home> {
                                   children: [
                                     Icon(Icons.person_4_rounded,
                                       color: selectedIndex==1 ? Colors.lightBlueAccent : AppColors.whiteColor
-                                      ,size: 30,),
+                                      ,size: 20,),
                                     Text('Profile',style: TextStyle(color:
                                     selectedIndex==1 ? Colors.lightBlueAccent : AppColors.whiteColor
                                     ),)
                                   ],
                                 ),
                               ),
-                              SizedBox(),
+
+                              InkWell(
+                                onTap: (){
+                                  Navigator.pushNamed(context, RouteName.Login);
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.logout,
+                                      color: selectedIndex==1 ? AppColors.whiteColor : AppColors.whiteColor
+                                      ,size: 20,),
+                                    Text('Logout',style: TextStyle(color: AppColors.whiteColor
+                                    ),)
+                                  ],
+                                ),
+                              ),
+
 
                             ],
                           ),
